@@ -5,13 +5,18 @@ type Props = {
   photos: Photo[];
 };
 
-// Improvements
+// Future improvements to consider:
 // - Dynamic Image Sourcing: Optimize images on-the-fly based on user's device and viewport
-// - Pagination / Infinite Scrolling: To handle large sets of photos
-// - Error Handling: Proper error handling for API request and image loading
-// - Accessibility: Add support to screen readers
-// - Responsive Design: Better responsiveness across different screen sizes
+// - Pagination / Infinite Scrolling: To handle large sets of photos more efficiently
+// - Error Handling: Proper error handling for API request failures and image loading errors
+// - Accessibility: Enhance support for screen readers to improve accessibility
+// - Responsive Design: Ensure better responsiveness across different screen sizes
 
+/**
+ * PhotoGallery component that displays a collection of images.
+ * @param photos Array of Photo objects used to display images in the gallery.
+ * @returns A JSX element rendering the photos in a responsive grid.
+ */
 const PhotoGallery = ({ photos }: Props) => (
   <div className="flex gap-[20px] justify-center flex-wrap">
     {photos.map(photo => (
